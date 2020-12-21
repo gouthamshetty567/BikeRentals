@@ -1,0 +1,13 @@
+<template>    
+        <lightning-card title="Selected Bike Details">            
+            <p class="slds-p-horizontal_small">
+                    <lightning-record-form
+                        record-id={bikeId}
+                        object-api-name={objectApiName}
+                        fields={fields}
+                        columns="1"
+                        mode="readonly">
+                    </lightning-record-form>
+            </p>        
+        </lightning-card>     
+</template>

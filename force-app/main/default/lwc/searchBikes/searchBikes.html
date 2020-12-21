@@ -1,0 +1,12 @@
+<template>    
+    <lightning-card title="LIVE TO TRAVEL" icon-name="custom:custom80" >        
+            <lightning-button label="Search" onclick={handleSearch} variant="brand" slot="actions"></lightning-button>
+            <lightning-input style="padding:20px;" label="Search Bike" value={bikeName} onchange={handleChange}></lightning-input>        
+        <!--<lightning-datatable data={BikeList} key-field="id" columns={columns}></lightning-datatable>-->
+        <template for:each={BikeList} for:item="c">
+            <P key={c.Id}>
+               <c-matching-bikes bikerecords={c} key={c.Id}></c-matching-bikes>
+            </P>
+         </template>        
+    </lightning-card>
+</template>
